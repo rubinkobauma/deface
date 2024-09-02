@@ -1,0 +1,133 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HACKED BY 1800_NepalXwd</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            color: lime;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1.3rem;
+            background: url('https://i.pinimg.com/originals/16/02/b2/1602b26c05ee78120695d592a68b8912.gif') no-repeat center center;
+            background-size: cover;
+        }
+
+        @keyframes flow {
+            0% { background-position: 0 0; }
+            100% { background-position: 0 -10000px; }
+        }
+
+        @keyframes blink {
+            0% { opacity: 1; }
+            49% { opacity: 1; }
+            50% { opacity: 0; }
+            99% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        .terminal-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            z-index: 1;
+            position: relative;
+        }
+
+        #terminal {
+            white-space: pre-wrap;
+            padding: 20px;
+            width: 800px; /* Fixed width */
+            height: 450px; /* Fixed height */
+            margin: auto;
+            border: 1px solid lime;
+            background: rgba(0, 0, 0, 0.85);
+            border-radius: 5px;
+            box-shadow: 0 0 10px 1px lime;
+            overflow-y: auto;
+            position: relative; /* For absolute positioning of the cursor */
+        }
+
+        .cursor {
+            border-right: 2px solid lime;
+            animation: blink 1s step-end infinite;
+        }
+
+        .red {
+            color: red;
+        }
+
+        .blue {
+            color: aqua;
+        }
+
+        .trip {
+            color: darkmagenta
+        }
+
+        .title {
+            color: lime;
+            font-weight: bold;
+        }
+
+        /* Adjust styles for smaller screens */
+        @media screen and (max-width: 768px) {
+            body {
+                font-size: 1rem;
+            }
+            #terminal {
+                width: 100%; /* Make it full width on smaller screens */
+                max-height: 80vh; /* Limit height on smaller screens */
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="terminal-container">
+    <div id="terminal">
+
+    </div>
+</div>
+<script>
+    const terminal = document.getElementById('terminal');
+    let text = `<span class="red">root@1800_Nepal:~#</span> hello admin!?\n`;
+    text += `<span class="red">root@1800_Nepal:~#</span> 1800_Nepal Was Here !!!\n`;
+    text += `<span class="red">root@1800_Nepal:~#</span> This webserver's security is low fix it.\n`;
+    text += `<span class="red">root@1800_Nepal:~#</span> I already patched so no other hackers can enter.\n `;
+    text += `\n`;
+    text += `<span class="blue">Hacked By 1800_Nepal ~</span>\n`;
+    text += `\n`;
+    text += `<span class="trip" id="greet">Greetz</span> \n`;
+    text += `<span class="blue"> 1800_Nepal </span> \n`;
+
+    let index = 0;
+    let intervalId;
+
+    function typeWriter() {
+        if (index < text.length) {
+            terminal.innerHTML = text.substring(0, index);
+            index++;
+        } else {
+            clearInterval(intervalId);
+            terminal.innerHTML = text;
+            terminal.innerHTML += '<span class="cursor"></span>'; // Add cursor at the end
+            restartTyping();
+        }
+    }
+
+    function restartTyping() {
+        setTimeout(() => {
+            index = 0; // Reset the index
+            terminal.innerHTML = ''; // Clear the terminal content
+            intervalId = setInterval(typeWriter, 40); // Restart the typing effect
+        }, 4000); // 4-second delay
+    }
+
+    intervalId = setInterval(typeWriter, 40);
+</script>
+</body>
+</html>
